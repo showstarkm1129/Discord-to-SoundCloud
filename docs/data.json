@@ -1,0 +1,27 @@
+{
+  "nowPlaying": {
+    "title": "サンプル曲（ダミー）",
+    "artist": "Sample Artist",
+    "artwork": "https://i1.sndcdn.com/artworks-000000000000-000000-t500x500.jpg",
+    "url": "https://soundcloud.com/discover",
+    "isPlaying": true,
+    "startedAt": "2026-06-15T00:00:00.000Z"
+  },
+  "history": [
+    {
+      "title": "サンプル曲（ダミー）",
+      "artist": "Sample Artist",
+      "artwork": "https://i1.sndcdn.com/artworks-000000000000-000000-t500x500.jpg",
+      "url": "https://soundcloud.com/discover",
+      "playedAt": "2026-06-15T00:00:00.000Z"
+    },
+    {
+      "title": "ひとつ前の曲（ダミー）",
+      "artist": "Another Artist",
+      "artwork": null,
+      "url": "https://soundcloud.com/discover",
+      "playedAt": "2026-06-14T23:50:00.000Z"
+    }
+  ],
+  "updatedAt": "2026-06-15T00:00:00.000Z"
+}

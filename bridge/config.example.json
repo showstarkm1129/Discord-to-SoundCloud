@@ -1,0 +1,30 @@
+{
+  "discord": {
+    "clientId": "ここにDiscord Developer PortalのClient IDを入れる",
+    "assets": {
+      "largeImageKey": "soundcloud_logo",
+      "playSmallImageKey": "play",
+      "pauseSmallImageKey": "pause",
+      "useArtworkAsLargeImage": true
+    }
+  },
+  "websocket": {
+    "port": 6472
+  },
+  "history": {
+    "enabled": true,
+    "maxItems": 100,
+    "file": "history.json"
+  },
+  "github": {
+    "enabled": false,
+    "token": "ここにGitHub Personal Access Tokenを入れる（リポジトリにはコミットしない）",
+    "owner": "あなたのGitHubユーザー名",
+    "repo": "リポジトリ名",
+    "branch": "main",
+    "path": "docs/data.json",
+    "commitName": "soundcloud-bridge",
+    "commitEmail": "bot@example.com",
+    "minCommitIntervalMs": 60000
+  }
+}

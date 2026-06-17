@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 240px;
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 14px;
+        background: #121212;
+        color: #eee;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 10px;
+        color: #ff5500;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        margin: 6px 0;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #888;
+      }
+      .dot.on {
+        background: #1db954;
+      }
+      .hint {
+        font-size: 11px;
+        color: #999;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SoundCloud → Discord</h1>
+    <div class="row">
+      <span class="dot" id="dot"></span>
+      <span id="status">確認中…</span>
+    </div>
+    <div class="hint" id="hint"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

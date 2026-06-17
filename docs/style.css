@@ -1,0 +1,227 @@
+:root {
+  --bg: #0f0f12;
+  --card: #1a1a20;
+  --card-2: #22222a;
+  --text: #f2f2f5;
+  --muted: #9a9aa5;
+  --accent: #ff5500;
+  --green: #1db954;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", sans-serif;
+  background: radial-gradient(1200px 600px at 50% -10%, #25151000, #0f0f12), var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.site-header .logo {
+  font-size: 34px;
+  color: var(--accent);
+}
+.site-header h1 {
+  margin: 4px 0 2px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Now playing card */
+.np-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--card-2), var(--card));
+  border: 1px solid #2c2c36;
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.np-loading,
+.np-empty {
+  color: var(--muted);
+  text-align: center;
+  width: 100%;
+  padding: 24px 0;
+}
+.np-art {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #333;
+  flex-shrink: 0;
+}
+.np-art.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #555;
+}
+.np-info {
+  min-width: 0;
+  flex: 1;
+}
+.np-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+  margin-bottom: 6px;
+}
+.np-status.paused {
+  color: var(--muted);
+}
+.np-status .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 1.6s infinite;
+}
+.np-status.paused .pulse {
+  background: var(--muted);
+  animation: none;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.np-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.np-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+.np-title a:hover {
+  color: var(--accent);
+}
+.np-artist {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* History */
+.history {
+  margin-top: 36px;
+}
+.history h2 {
+  font-size: 15px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid #25252e;
+  border-radius: 10px;
+  padding: 10px 12px;
+  transition: background 0.15s;
+}
+.history-item:hover {
+  background: var(--card-2);
+}
+.hi-art {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #333;
+  flex-shrink: 0;
+}
+.hi-art.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 18px;
+}
+.hi-main {
+  min-width: 0;
+  flex: 1;
+}
+.hi-title {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hi-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+.hi-title a:hover {
+  color: var(--accent);
+}
+.hi-artist {
+  font-size: 12px;
+  color: var(--muted);
+}
+.hi-time {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.site-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+.site-footer a {
+  color: var(--muted);
+}
+.dot-sep {
+  margin: 0 8px;
+}
